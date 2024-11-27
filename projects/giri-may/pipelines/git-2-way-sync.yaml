@@ -4,6 +4,7 @@ metadata:
   name: git-2-way-sync
   project: giri-may
 spec:
+  active: true
   stages:
   - config:
       destinationRepo: {}
