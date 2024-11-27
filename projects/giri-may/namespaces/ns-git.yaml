@@ -20,6 +20,4 @@ spec:
     labels:
     - key: rafay.dev/clusterName
       value: giri-nov26-az
-    - key: rafay.dev/clusterName
-      value: giri-mks-nov26
   resourceQuotas: {}
