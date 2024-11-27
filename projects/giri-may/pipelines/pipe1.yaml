@@ -25,11 +25,3 @@ spec:
       systemToGitSync: true
     name: test
     type: SystemSync
-  triggers:
-  - config:
-      repo:
-        provider: Github
-        repository: giri-nov27
-        revision: main
-    name: nginx
-    type: Webhook
