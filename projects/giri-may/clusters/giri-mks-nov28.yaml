@@ -5,7 +5,7 @@ metadata:
   project: giri-may
 spec:
   blueprint:
-    name: default
+    name: minimal
   config:
     installerTtl: 365
     kubernetesVersion: v1.30.4
