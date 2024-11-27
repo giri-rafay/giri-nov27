@@ -4,6 +4,7 @@ metadata:
   name: pipe1
   project: giri-may
 spec:
+  active: true
   stages:
   - config:
       destinationRepo: {}
