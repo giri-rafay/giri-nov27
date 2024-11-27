@@ -1,0 +1,51 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: git-2-way-sync
+  project: giri-may
+spec:
+  stages:
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: Addon
+      - name: AddonOverride
+      - name: Blueprint
+      - name: Catalog
+      - name: Override
+      - name: Cluster
+      - name: ClusterNetworkPolicy
+      - name: ClusterNetworkPolicyRule
+      - name: CostProfile
+      - name: OPAConstraint
+      - name: OPAProfile
+      - name: OPAPolicy
+      - name: Namespace
+      - name: Agent
+      - name: NamespaceNetworkPolicy
+      - name: OPAConstraintTemplate
+      - name: Repository
+      - name: Pipeline
+      - name: NamespaceNetworkPolicyRule
+      - name: SecretSealer
+      - name: SecretStore
+      - name: Workload
+      - name: WorkloadTemplate
+      - name: NetworkPolicyProfile
+      - name: SecretProviderClass
+      sourceAsDestination: true
+      sourceRepo:
+        repository: giri-nov27
+        revision: main
+      systemToGitSync: true
+    name: test
+    type: SystemSync
+  triggers:
+  - config:
+      repo:
+        provider: Github
+        repository: giri-nov27
+        revision: main
+    name: test
+    type: Webhook

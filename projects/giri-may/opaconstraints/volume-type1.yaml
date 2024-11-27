@@ -1,0 +1,12 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAConstraint
+metadata:
+  name: volume-type1
+  project: giri-may
+spec:
+  artifact:
+    artifact: {}
+    options: {}
+    type: Yaml
+  templateName: volume-types
+  version: v11

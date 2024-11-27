@@ -1,0 +1,8 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Catalog
+metadata:
+  name: new
+  project: giri-may
+spec:
+  repository: default-bitnami
+  type: HelmRepository

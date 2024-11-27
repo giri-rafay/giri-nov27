@@ -1,0 +1,19 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAProfile
+metadata:
+  name: giri-opa-profile1
+  project: giri-may
+spec:
+  excludedNamespaces:
+  - namespaces:
+    - {}
+    processes:
+    - '*'
+  installationParams:
+    auditFromCache: true
+    auditInterval: 600
+    auditMatchKindOnly: true
+    constraintViolationsLimit: 20
+    enableDeleteOperations: true
+  opaVersion: 3.16.3
+  version: v3
