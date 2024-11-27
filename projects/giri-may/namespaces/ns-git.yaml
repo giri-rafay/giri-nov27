@@ -6,5 +6,17 @@ metadata:
   name: ns-git
   project: giri-may
 spec:
-  artifact: {}
+  artifact:
+    path:
+      name: ns.yaml
+    repository: giri-nov27
+    revision: main
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-nov26-az
   resourceQuotas: {}
