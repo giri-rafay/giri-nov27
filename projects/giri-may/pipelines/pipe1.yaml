@@ -1,0 +1,26 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: pipe1
+  project: giri-may
+spec:
+  stages:
+  - config:
+      destinationRepo: {}
+      excludedResources:
+      - name: ConfigContext
+      - name: EnvironmentTemplate
+      - name: Resource
+      - name: ResourceTemplate
+      - name: Environment
+      - name: Driver
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        repository: giri-nov27
+        revision: main
+      systemToGitSync: true
+    name: test
+    type: SystemSync

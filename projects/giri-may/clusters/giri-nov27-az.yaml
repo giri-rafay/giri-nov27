@@ -1,16 +1,17 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: giri-nov26-az
+  name: giri-nov27-az
   project: giri-may
 spec:
   blueprintConfig:
-    name: default-aks
+    name: bp-custom-alert-manager
+    version: v1
   cloudCredentials: giri-aks
   config:
     kind: aksClusterConfig
     metadata:
-      name: giri-nov26-az
+      name: giri-nov27-az
     spec:
       managedCluster:
         apiVersion: "2024-01-01"
@@ -22,7 +23,7 @@ spec:
             enablePrivateCluster: false
             enablePrivateClusterPublicFQDN: false
           disableLocalAccounts: false
-          dnsPrefix: giri-nov26-az-dns
+          dnsPrefix: giri-nov27-az-dns
           enablePodSecurityPolicy: false
           enableRBAC: true
           kubernetesVersion: 1.30.0

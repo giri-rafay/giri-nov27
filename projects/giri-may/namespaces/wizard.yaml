@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   annotations:
     rafay.dev/description: ""
-  name: w-ns
+  name: wizard
   project: giri-may
 spec:
   limitRange:
@@ -13,5 +13,5 @@ spec:
   placement:
     labels:
     - key: rafay.dev/clusterName
-      value: giri-nov26-az
+      value: giri-nov27-az
   resourceQuotas: {}
