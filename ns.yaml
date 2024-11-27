@@ -1,7 +1,6 @@
 kind: Namespace
 apiVersion: v1
 metadata:
-  name: ns-upload
+  name: ns-git
   labels:
-    name: systemqd
-    k8smgmt.io/project: giri-may
+    name: systemqdwewsdas
