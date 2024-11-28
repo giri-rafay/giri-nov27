@@ -4,6 +4,29 @@ metadata:
   name: cbp1
   project: giri-may
 spec:
+  base:
+    name: gbp1
+    version: v1
+  customAddons:
+  - name: nginx-addon
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      gpuOperator:
+        enabled: true
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  drift:
+    action: Deny
+    enabled: true
   driftWebhook:
     enabled: true
+  namespaceConfig:
+    enableSync: true
+    syncType: Managed
   type: custom
+  version: v1
