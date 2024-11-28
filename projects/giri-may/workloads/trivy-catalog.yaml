@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: trivy-catalog
+  project: giri-may
+spec:
+  artifact:
+    artifact:
+      catalog: default-aqua
+      chartName: harbor-scanner-trivy
+      chartVersion: 0.1.3
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: workload-ns
+  placement:
+    selector: rafay.dev/clusterName=giri-nov27-az
+  version: trivy-catalog-v1-202411280217190000
