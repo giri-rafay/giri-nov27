@@ -5,6 +5,10 @@ metadata:
   project: giri-may
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      chartPath:
+        name: file://artifacts/nginx1/nginx-15.4.2.tgz
+      valuesPaths:
+      - name: file://artifacts/nginx1/values.yaml
     type: Helm
   namespace: workload-ns
