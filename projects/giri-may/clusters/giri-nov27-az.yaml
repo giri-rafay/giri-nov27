@@ -5,7 +5,7 @@ metadata:
   project: giri-may
 spec:
   blueprintConfig:
-    name: bp-custom-alert-manager
+    name: cbp1
     version: v1
   cloudCredentials: giri-aks
   config:
